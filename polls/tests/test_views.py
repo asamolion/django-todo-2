@@ -2,9 +2,8 @@ from datetime import datetime
 
 from django.test import Client, TestCase
 from django.http import Http404
-from rest_framework.test import APIRequestFactory
 
-from .models import Question, Choice
+from polls.models import Question, Choice
 # Create your tests here.
 
 class QuestionTestCase(TestCase):
@@ -35,9 +34,3 @@ class QuestionTestCase(TestCase):
         """
         response = self.client.get('/polls/3/')
         self.assertEqual(response.status_code, 404)
-
-
-class QuestionsAPITestCase()
-
-
-
